@@ -136,8 +136,9 @@ class _MyHomePageState extends State<MyHomePage>
                     child: Column(
                       children: <Widget>[
                         Form(
+                            autovalidateMode:
+                                AutovalidateMode.onUserInteraction,
                             key: _formkey,
-                            autovalidate: _autoValidate,
                             child: Column(
                               children: [
                                 TextFormField(
