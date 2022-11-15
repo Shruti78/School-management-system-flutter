@@ -17,6 +17,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+  // ignore: non_constant_identifier_names
   Animation animation, delayedAnimation, muchDelayedAnimation, LeftCurve;
   AnimationController animationController;
 
@@ -25,7 +26,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     // TODO: implement initState
     super.initState();
     Firebase.initializeApp();
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     animationController =
         AnimationController(duration: Duration(seconds: 3), vsync: this);
     animation = Tween(begin: -1.0, end: 0.0).animate(CurvedAnimation(
@@ -54,6 +55,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
+    // ignore: unused_local_variable
     final double height = MediaQuery.of(context).size.height;
 
     animationController.forward();

@@ -14,14 +14,13 @@ class ExamResult extends StatefulWidget {
 
 class _ExamResultState extends State<ExamResult>
     with SingleTickerProviderStateMixin {
+  // ignore: non_constant_identifier_names
   Animation animation, delayedAnimation, muchDelayedAnimation, LeftCurve;
   AnimationController animationController;
   Randomizer randomcolor = Randomizer();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    //SystemChrome.setEnabledSystemUIOverlays([]);
 
     animationController =
         AnimationController(duration: Duration(seconds: 3), vsync: this);
@@ -39,7 +38,6 @@ class _ExamResultState extends State<ExamResult>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     animationController.dispose();
     super.dispose();
   }
@@ -122,7 +120,6 @@ class _ExamResultState extends State<ExamResult>
                           hint: "Please Select",
                           mode: Mode.MENU,
                           showSelectedItem: true,
-                          
                           items: [
                             "Quarterly",
                             "half yearly",
@@ -154,7 +151,7 @@ class _ExamResultState extends State<ExamResult>
                         transform: Matrix4.translationValues(
                             muchDelayedAnimation.value * width, 0, 0),
                         child: Padding(
-                          padding: const EdgeInsets.only(top:8.0),
+                          padding: const EdgeInsets.only(top: 8.0),
                           child: SubjectCard(
                             subjectname: "English",
                             chapter: "1-5",
@@ -165,11 +162,11 @@ class _ExamResultState extends State<ExamResult>
                           ),
                         ),
                       ),
-                       Transform(
+                      Transform(
                         transform: Matrix4.translationValues(
                             muchDelayedAnimation.value * width, 0, 0),
                         child: Padding(
-                          padding: const EdgeInsets.only(top:8.0),
+                          padding: const EdgeInsets.only(top: 8.0),
                           child: SubjectCard(
                             subjectname: "Maths",
                             chapter: "1-5",
@@ -180,11 +177,11 @@ class _ExamResultState extends State<ExamResult>
                           ),
                         ),
                       ),
-                       Transform(
+                      Transform(
                         transform: Matrix4.translationValues(
                             muchDelayedAnimation.value * width, 0, 0),
                         child: Padding(
-                          padding: const EdgeInsets.only(top:8.0),
+                          padding: const EdgeInsets.only(top: 8.0),
                           child: SubjectCard(
                             subjectname: "science",
                             chapter: "1-5",
@@ -195,11 +192,11 @@ class _ExamResultState extends State<ExamResult>
                           ),
                         ),
                       ),
-                       Transform(
+                      Transform(
                         transform: Matrix4.translationValues(
                             muchDelayedAnimation.value * width, 0, 0),
                         child: Padding(
-                          padding: const EdgeInsets.only(top:8.0),
+                          padding: const EdgeInsets.only(top: 8.0),
                           child: SubjectCard(
                             subjectname: "Social Science",
                             chapter: "1-5",
@@ -372,11 +369,10 @@ class _ExamResultState extends State<ExamResult>
                                 ),
                               ),
                             ),
-                         
                           ],
                         ),
                       ),
-                         SizedBox(
+                      SizedBox(
                         height: height * 0.20,
                       ),
                     ],

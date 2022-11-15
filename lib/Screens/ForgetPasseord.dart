@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 import 'package:fzregex/utils/fzregex.dart';
 import 'package:fzregex/utils/pattern.dart';
@@ -10,6 +12,7 @@ class ForgetPassword extends StatefulWidget {
 
 class _ForgetPasswordState extends State<ForgetPassword>
     with SingleTickerProviderStateMixin {
+  // ignore: non_constant_identifier_names
   Animation animation, delayedAnimation, muchDelayedAnimation, LeftCurve;
   AnimationController animationController;
 
@@ -35,7 +38,9 @@ class _ForgetPasswordState extends State<ForgetPassword>
   }
 
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  // ignore: unused_field
   bool _autovalidate = false;
+  // ignore: unused_field
   String _email;
   String _rollno;
   @override

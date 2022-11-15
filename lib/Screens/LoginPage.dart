@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:fzregex/utils/fzregex.dart';
 import 'package:fzregex/utils/pattern.dart';
 import 'package:school_management/Screens/home.dart';
@@ -56,9 +56,8 @@ class _MyHomePageState extends State<MyHomePage>
     super.dispose();
   }
 
-  UserModel _userfromfirebase(FirebaseUser user) {
+  UserModel _userfromfirebase(User user) {
     return user != null ? UserModel(uid: user.uid) : null;
-    print(user);
   }
 
   GlobalKey<FormState> _formkey = GlobalKey<FormState>();
@@ -298,7 +297,6 @@ class _MyHomePageState extends State<MyHomePage>
                                     builder: (BuildContext context) => Home(),
                                   ));
                             }
-                            ;
                           },
                           child: MaterialButton(
                             onPressed: () {},
